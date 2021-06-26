@@ -1,0 +1,11 @@
+[33mcommit ff49d241905606f6c465cf17a423c041a4d737b6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Ishvendra <71009922+Ishvendra@users.noreply.github.com>
+Date:   Fri Jun 25 02:58:22 2021 +0530
+
+    Second commit -> view engine set up using ejs
+
+[33mcommit 0311ed80d4040be7607fc6ecddb2c4a5eec84847[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ishvendra <71009922+Ishvendra@users.noreply.github.com>
+Date:   Thu Jun 24 22:05:53 2021 +0530
+
+    First commit- Creating directory structure and setup express server
