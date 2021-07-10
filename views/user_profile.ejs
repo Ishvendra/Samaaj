@@ -7,11 +7,18 @@
     <title>
         <%= title %>
     </title>
+    <link rel="stylesheet" href="/css/user_profile.css">
 </head>
 <body>
     <h1>
-        <%= title %>
+        Hi - <%= user.name %>
+        <br>
+        Email - <%= user.email %>
     </h1>
+
+    <form action="/users/sign-out" method="POST">
+        <button type="submit">Sign out</button>
+    </form>
     
 </body>
 </html>
