@@ -1,5 +1,25 @@
-
-
-<h1>
-    Header
-</h1>
+<header id="layout-header">
+    <nav>
+        <div id="logo">
+            <a href="http://localhost:8000/"><h1 id="header">Samaaj</h1></a>
+        </div>
+        <div id="auth-links">
+            <ul>
+                <% if(locals.user){ %>
+                    <li id="name-header"><%= user.name %></li>
+                    <li>
+                        <a href="/users/sign-out">Sign out</a>
+                    </li>
+                <% }else{ %>
+                    <li>
+                        <a href="/users/sign-in">Sign in</a>
+                    </li>
+                    <li>
+                        <a href="/users/sign-up">Sign up</a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <div id="line"></div>
+</header>

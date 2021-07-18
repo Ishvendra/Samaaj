@@ -1,25 +1,40 @@
+const User = require('../models/user.js');
+
 module.exports.profile = function(req,res){
     return res.render('user_profile' , {
-        title: "User profile"
-    });
+        title: 'User Profile'
+    })
 }
 
-const User = require('../models/user.js');
 
 //render the sign up page
 module.exports.signUp = function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect("/users/profile");
+    }
     return res.render('user_sign_up' , {
-        title: "Sign up"
-    });
+        title: "Samaaj | Sign up"
+    })
 }
 
 
 //render the sign in page
 module.exports.signIn = function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect("/users/profile");
+    }
     return res.render('user_sign_in' , {
-        title: "Sign in"
-    });
+        title: "Samaaj | Sign in"
+    })
 }
+
+//redirect to sign-in on signing-out
+module.exports.destroySession = function(req,res){
+    //logout fn is provided by the passport lib
+    req.logout();
+    return res.redirect('/');
+}
+
 
 //get the sign up data
 module.exports.create = function(req,res){
@@ -42,5 +57,5 @@ module.exports.create = function(req,res){
 
 //sign in and create a session for the user
 module.exports.createSession = function(req,res){
-    //todo later
+    return res.redirect('/');
 }

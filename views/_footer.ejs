@@ -1,5 +1,26 @@
-
-
-<h1>
-    Footer
-</h1>
+<footer id="footer-layout">
+    <div id="footer-name">
+        <p><a href="http://ishvendra.byethost22.com/portfolio%20page/portfolio.html#" target="_blank">Ishvendra 2021 &#169;</a></p>
+    </div>
+        <div id="footer-links">
+            <nav>
+                <ul>
+                    <% if(locals.user){ %>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/users/profile">Profile</a>
+                        </li>
+                    <% }else{ %>
+                        <li>
+                            <a href="/users/sign-in">Sign in</a>
+                        </li>
+                        <li>
+                            <a href="/users/sign-up">Sign up</a>
+                        </li>
+                    <% } %>
+                </ul>
+            </nav>
+        </div>
+</footer>

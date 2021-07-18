@@ -1,0 +1,52 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#layout-header{
+    height: 8%;
+    font-family: monospace;
+    font-size: 1.5em;
+    nav{
+        display: flex;
+        padding: 0px 10px;
+        justify-content: space-between;
+        color: white;
+
+        #logo{
+            a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+        }
+
+        #auth-links{
+            ul{
+                margin: 5% 5px;
+                margin-top: 40px;
+                display: flex;
+                list-style-type: none;
+
+                #name-header{
+                    color: #86c323;
+                }
+
+                li{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    #line{
+        height: 2px;
+        margin-left: 1%;
+        width: 98%;
+        background-color: #99ff00;
+        box-shadow: 0 1px 18px #86c323, 0 1px 25px #86c323;
+    }
+    a:hover{
+        color: #86c323;
+    }
+}
